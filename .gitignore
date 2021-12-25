@@ -15,8 +15,10 @@ public/hot
 public_html/storage
 public_html/hot
 
+/.idea
 storage/*.key
 .env
+.DS_Store
 Homestead.yaml
 Homestead.json
 /.vagrant
