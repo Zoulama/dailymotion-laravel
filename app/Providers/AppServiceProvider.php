@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Nbk\infrastructure\Logging\CreateGoogleCloudLogger;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,9 +13,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        config(['logging.channels.googlecloud' => [
-            'driver' => 'custom',
-            'via' => CreateGoogleCloudLogger::class,
-        ] ]);
+
     }
 }

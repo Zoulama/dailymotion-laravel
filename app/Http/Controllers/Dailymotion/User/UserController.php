@@ -128,7 +128,6 @@ class UserController extends Controller
      */
     public function confirmation(string $email, int $code)
     {
-
         try {
             return response()->json(
                 [
@@ -143,17 +142,14 @@ class UserController extends Controller
                             ->toArray()
                     ]
                 ]
-
             );
         } catch (UserServiceNotFoundException $e) {
             return response()->json(
                 [
                     'status' => 'error',
                     'StatusCode' => 0,
-                    'StatusDescription' => json_decode(
-                        $e->getMessage(),
-                        true
-                    )
+                    'StatusDescription' => $e->getMessage()
+
                 ]
             );
         }

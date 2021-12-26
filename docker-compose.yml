@@ -3,7 +3,7 @@ services:
   apache-php:
     build:
       context: .
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile
     volumes:
       - type: bind
         source: .
@@ -29,5 +29,5 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: dailymotion
     ports:
-      - "27015:27017"
+      - "27016:27017"
 

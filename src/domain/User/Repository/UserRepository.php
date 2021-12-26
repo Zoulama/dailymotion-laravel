@@ -8,8 +8,6 @@ use Exception;
 use Illuminate\Support\Arr;
 use MongoDB\BSON\ObjectId;
 use MongoDB\Collection;
-use MongoDB\Exception\InvalidArgumentException;
-use MongoDB\Exception\UnsupportedException;
 use Dailymotion\domain\User\Entity\UserEntity;
 use Dailymotion\domain\User\Entity\UserEntityInterface;
 use Dailymotion\domain\User\Repository\Exception\UserRepositoryNotFoundException;
@@ -145,7 +143,7 @@ class UserRepository implements UserRepositoryInterface
             }
 
             throw new UserRepositoryNotFoundException(
-                "Email déjà verifié"
+                "Email already  verified"
             );
 
         } catch (Exception $e) {

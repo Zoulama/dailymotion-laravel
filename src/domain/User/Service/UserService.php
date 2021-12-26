@@ -94,26 +94,7 @@ class UserService implements UserServiceInterface
             throw new UserServiceNotFoundException(
                 $e->getMessage()
             );
-        } catch (Exception $e) {
-            throw new Exception(
-                $e->getMessage()
-            );
         }
     }
-
-    /**
-     * @inheritDoc
-     */
-    public function rules(): array
-    {
-        return [
-            'webhook' => ['required', 'string'],
-            'webhook_id' => ['required', 'string'],
-            'object' => ['required', 'string'],
-            'object_id' => ['required', 'string'],
-            'object_payload' => ['required', 'array']
-        ];
-    }
-
 
 }
