@@ -26,9 +26,23 @@ make build
 make up
 ```
 
-## down container
+## Go to mailtrip.io , create an account and setup conf values on docker-compose.yml
+
+|                Name | Description     |
+|-------------------- |-----------------|
+| MAIL_SERVER         | smtp.mailtrap.io|
+| MAIL_PORT           | 587             |
+| MAIL_USERNAME       | username        |
+| MAIL_PASSWORD       | password        |
+
+## set  mailtrip conf  values  in .env file
 ```
-make down
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=587
+MAIL_USERNAME=xxxxxxxx
+MAIL_PASSWORD=xxxxxxx
+MAIL_FROM_ADDRESS=contact@daily.com
 ```
 
 [Head to]( http://localhost:9099/documentation/api/rest/swagger/)
@@ -36,5 +50,8 @@ make down
 
 ## got to http://localhost:9099/documentation/api/rest/swagger/
 
-## Environment variables on docker-compose.yml
 
+## down container
+```
+make down
+```
