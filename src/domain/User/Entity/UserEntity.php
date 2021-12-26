@@ -57,7 +57,6 @@ class UserEntity implements UserEntityInterface
        return  [
             'userId' => $this->userId,
             'email' => $this->email,
-            'password' => $this->password,
             'code' => $this->code,
             'verifiedEmail' => $this->verifiedEmail
 
