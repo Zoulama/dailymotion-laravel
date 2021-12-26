@@ -2,7 +2,7 @@
 
 The Dailymotion user service is a python 3 project that handles user Registration in a Mongo DB 
 
-## requirements  php7.4 or php8
+## requirements  php7.4 or php8 because all my variables are typed
 ```
 brew install php@7.4
 ```
